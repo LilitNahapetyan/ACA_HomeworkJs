@@ -1,0 +1,20 @@
+#background{
+    width: 90%;
+    height:500px;
+    border:solid 1px blue;
+    margin:auto;
+}
+
+#btn{
+    margin-left:30%;
+    margin-top:15%;
+    width:500px;
+    height:100px;
+    font-size: 28px;
+    padding: 20px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
