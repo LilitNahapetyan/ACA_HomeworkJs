@@ -9,34 +9,45 @@ const btnRed = document.getElementById("red");
 const btnGreen = document.getElementById("green");
 
 
-input.addEventListener("keydown",function(e){
-    screen.innerHTML = e.target.value;
+function changeStyle(fontType, value) {
+  var selected = window.getSelection();
+  var span = '<span style= ' + fontType + ":" + value + ";>" + selected + '</span>';
+  screen.innerHTML = screen.innerHTML.replace(selected, span);
+}
+
+input.addEventListener("keyup", function(e) {
+  screen.innerHTML = e.target.value;
 })
 
-boldBtn.addEventListener("click",function(){
-    screen.style.fontWeight = "bold";
+boldBtn.addEventListener("click", function() {
+  changeStyle("font-weight", "bold");
 })
 
-itBtn.addEventListener("click",function(){
-    screen.style.fontStyle = "italic";
+itBtn.addEventListener("click", function() {
+  changeStyle("font-style", "italic");
 })
 
-delBtn.addEventListener("click",function(){
-    screen.style.textDecoration = "line-through";
+delBtn.addEventListener("click", function() {
+  changeStyle("text-decoration", "line-through");
 })
 
-undBtn.addEventListener("click",function(){
-    screen.style.textDecoration = "underline";}
-)
+undBtn.addEventListener("click", function() {
+  changeStyle("text-decoration", "underline");
+})
 
-cBtn.addEventListener("click",function(){
-    screen.innerHTML = screen.innerHTML.toUpperCase();}
-)
+cBtn.addEventListener("click", function() {
+  var selected = window.getSelection().toString();
 
-btnRed.addEventListener("click",function(){
-    screen.style.color = "red";}
-)
+  var span = "<span>" + selected.toUpperCase() + "</span>";
 
-btnGreen.addEventListener("click",function(){
-    screen.style.color = "green";}
-)
+  screen.innerHTML = screen.innerHTML.replace(window.getSelection(), span);
+})
+
+btnRed.addEventListener("click", function() {
+  changeStyle("color", "red");
+})
+
+btnGreen.addEventListener("click", function() {
+  changeStyle("color", "green");
+})
+
