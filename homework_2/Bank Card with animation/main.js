@@ -16,12 +16,14 @@ document.querySelector(".cvv-input").onmouseout = () => {
 }
 inputNumber.addEventListener('keyup', function(event) {
   const key = event.key;
-  if(isNaN(inputNumber.value)){
+  const en = /^[0-9]$/i.test(event.key);
+  if (key === "Backspace") {
+    CardNamberDel();
+  }
+  else if(!en){
     alert("Please,enter a number");
 }
-  else if (key === "Backspace") {
-    CardNamberDel(inputNumber);
-  } else {
+  else {
     CardNamberChanged(inputNumber)
   };
 });
@@ -62,7 +64,7 @@ const CardNamberChanged = (input) => {
   }
 }
 
-const c = (input) => {
+const CardNamberDel = () => {
 
 
   let i = cardNumber.innerHTML.indexOf("#") - 1;
