@@ -1,56 +1,50 @@
-const name = document.getElementById("name");
-const email = document.getElementById("email");
-const phone = document.getElementById("phone");
-const image = document.getElementById("image");
-const famale = document.getElementById('famale');
-const male = document.getElementById('male');
-const birthday = document.getElementById("birthday");
-const address = document.getElementById("address");
-const city = document.getElementById("city");
-const state = document.getElementById("state");
-const form = document.getElementById("form");
-const country = document.getElementById("country");
-const div = document.getElementById("div");
+const screen = document.getElementById("screen");
+const input = document.getElementById("input");
+const boldBtn = document.querySelector(".bold");
+const itBtn = document.querySelector(".italic");
+const delBtn = document.querySelector(".del");
+const undBtn = document.querySelector(".underline");
+const cBtn = document.querySelector(".capital");
+const btnRed = document.getElementById("red");
+const btnGreen = document.getElementById("green");
 
-
-const sbmt = document.getElementById("submit");
-
-
-function datalist() {
-  const length = state.options.length;
-  for (let i = 0; i < length; i++) {
-    div.innerHTML += "State" + options[0].value;
-  }
+function changeStyle(fontType, value) {
+  var selected = window.getSelection();
+  var span = '<span style= ' + fontType + ":" + value + ";>" + selected + '</span>';
+  screen.innerHTML = screen.innerHTML.replace(selected, span);
 }
 
-function create() {
-  div.innerHTML += "Name: " + name.value + "<br/>";
-  div.innerHTML += "Email: " + email.value + "<br/>";
-  div.innerHTML += "Phone: " + phone.value + "<br/>";
-  div.innerHTML += image.value;
-
-  if (famale.checked) {
-    div.innerHTML += "Gender: Famale <br/>";
-  } else {
-    div.innerHTML += "Gender: Male";
-  }
-  
-  
-  div.innerHTML += "Birthday: " + birthday.value + "<br/>";
-  div.innerHTML += "Address: " + address.value + "<br/>";
-  div.innerHTML += "City: " + city.value + "<br/>";
-  div.innerHTML += "State: " + state.value + "<br/>";
-  div.innerHTML += "Country: " + country.value + "<br/>";
-
-}
-sbmt.addEventListener("click", function(event) {
-  form.style['display'] = 'none';
-  event.preventDefault();
-
-
-  create();
-
-
-
+input.addEventListener("keyup", function(e) {
+  screen.innerHTML = e.target.value;
 })
 
+boldBtn.addEventListener("click", function() {
+  changeStyle("font-weight", "bold");
+})
+
+itBtn.addEventListener("click", function() {
+  changeStyle("font-style", "italic");
+})
+delBtn.addEventListener("click", function() {
+  changeStyle("text-decoration", "line-through");
+})
+
+undBtn.addEventListener("click", function() {
+  changeStyle("text-decoration", "underline");
+})
+
+cBtn.addEventListener("click", function() {
+  var selected = window.getSelection().toString();
+  
+    var span = "<span>" + selected.toUpperCase() + "</span>";
+
+  screen.innerHTML = screen.innerHTML.replace(window.getSelection(), span);
+})
+
+btnRed.addEventListener("click", function() {
+  changeStyle("color", "red");
+})
+
+btnGreen.addEventListener("click", function() {
+  changeStyle("color", "green");
+})
