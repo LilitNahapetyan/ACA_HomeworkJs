@@ -11,8 +11,6 @@ const state = document.getElementById("state");
 const form = document.getElementById("form");
 const country = document.getElementById("country");
 const div = document.getElementById("div");
-
-
 const sbmt = document.getElementById("submit");
 
 
@@ -24,10 +22,11 @@ function datalist() {
 }
 
 function create() {
+  const url = URL.createObjectURL(image.files[0]);
+  div.innerHTML += `<img src="${url}" alt="Image" style="width:400px;height:400px;"></img><br/>`;
   div.innerHTML += "Name: " + name.value + "<br/>";
   div.innerHTML += "Email: " + email.value + "<br/>";
   div.innerHTML += "Phone: " + phone.value + "<br/>";
-  div.innerHTML += image.value;
 
   if (famale.checked) {
     div.innerHTML += "Gender: Famale <br/>";
@@ -35,22 +34,18 @@ function create() {
     div.innerHTML += "Gender: Male";
   }
   
-  
   div.innerHTML += "Birthday: " + birthday.value + "<br/>";
   div.innerHTML += "Address: " + address.value + "<br/>";
   div.innerHTML += "City: " + city.value + "<br/>";
   div.innerHTML += "State: " + state.value + "<br/>";
   div.innerHTML += "Country: " + country.value + "<br/>";
-
+  
 }
 sbmt.addEventListener("click", function(event) {
   form.style['display'] = 'none';
   event.preventDefault();
 
-
   create();
-
-
 
 })
 

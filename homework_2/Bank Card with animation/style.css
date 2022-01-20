@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+    text-decoration: none;
+}
+
+.container{
+    min-height:100vh;
+    background-color: #eee;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow:column;
+    padding-bottom:60px;
+}
+
+.form{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.7);
+    padding:20px;
+    width:600px;
+    padding-top: 160px;
+
+}
+
+.inputBox{
+    margin-top:20px;
+}
+
+.inputBox label{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.inputBox input,select{
+    width:100%;
+    padding:10px;
+    margin-top: 10px;;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+.flexbox{
+    display:flex;
+    gap:15px;
+}
+
+.flexbox .inputBox{
+    flex:1 1  150px;
+
+}
+.submitButton{
+    width:100%;
+    background:rgb(62, 62, 148) ;
+    margin-top:20px;
+    padding:10px;
+    font-size: 20px;
+    color:#fff;
+    cursor:pointer;
+}
+
+.card-container{
+    margin-bottom:-150px;
+    position: relative;
+    height:250px;
+    width:400px;
+}
+
+.front{
+    position: absolute;
+    height:100%;
+    width:100%;
+    background: linear-gradient(45deg,blue,pink);
+    border-radius: 7px;
+    backface-visibility: hidden;
+    padding-top:10px;
+    transform: perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;  
+}
+ .image {
+    display:flex;
+   align-items: center;
+   justify-content: space-between;
+  }
+  
+  .image img {
+    width: 70px;
+    margin:20px;
+  }
+  .card-number{
+      padding:30px;
+      letter-spacing: 5px;
+      font-size:22px;
+      color:#fff;
+   }
+   .flexbox{
+    display:flex;
+    justify-content: space-between;
+    color:#fff;
+    font-size:15px;
+   }
+
+.back{
+    position: absolute;
+    height:100%;
+    width:100%;
+    border-radius: 7px;
+    background: linear-gradient(45deg,blue,pink);
+    padding:20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.stripe{
+    background: #000;
+    width:100%;
+    margin:10px 0;
+    height:50px;
+}
+
+.box{
+    padding:0 20px;
+}
+
+.box span{
+    color:#fff;
+    font-size: 15px;
+}
+.cvv-box{
+    height:50px;
+    padding:10px;
+    margin-top:5px;color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width:100%;
+
+}
