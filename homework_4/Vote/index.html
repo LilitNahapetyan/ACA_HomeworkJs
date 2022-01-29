@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+        <meta neme="viewport" content = "width-device-width initial-scale-1.0" />
+        <title>Vote Table</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+  <body>
+      <h1>Elections</h1>
+<form action="">
+      <label for="condidate">Condidate Name</label>
+      <input type="text" class = "condidate-input" name="name" id="add-name"/>
+
+      <label for="condidate-age">Condidate Age</label>
+      <input type="number" class = "condidate-input" id="add-age" name="age"/>
+
+      <label for="condidate-country">Condidate Country</label>
+      <input type="text" class = "condidate-input" id="add-country" name="country"/>
+
+      <input type="submit" class="button" id="add-btn" value="Vote"/>
+
+     
+    </form>
+    <table id="myTable">
+        <thead>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Country</th>
+          <th>Votes</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+            <td>5</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <script src="main.js"></script>
+  </body>
+
+</html>

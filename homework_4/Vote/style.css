@@ -1,0 +1,75 @@
+body{
+    background-color: black;
+}
+h1{
+    color:rgba(155, 109, 155, 0.795);
+    text-align:center;
+    padding-top: 20px;
+    font-size: 40px;
+    font-family:sans-serif;
+}
+
+label{
+    color:rgba(155, 109, 155, 0.795);
+    margin-left:25px ;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family:sans-serif;
+}
+
+.condidate-input{
+    margin-left:25px ;
+    border-radius: 4px;
+    border-style:hidden;
+    height: 30px;
+}
+
+.button{
+    height: 30px;
+    width: 90px;
+    margin-left: 15px;
+    text-align: center;
+    background-color: black;
+    color:#9c2daf;
+    border: 2px solid #9c2daf;
+    font-family: sans-serif;
+}
+
+.vote{
+    display: flex;
+  margin-top:40px;
+  justify-content: center;
+}
+
+#voteforcondidate{
+    width:150px;
+    border-radius: 5px;
+}
+
+table {
+	width: 700px;
+	margin: auto;
+    margin-top:40px;
+    color:whitesmoke;
+    font-family: serif;
+
+}
+
+thead th{
+    border: 1px solid #9c2daf;
+    background-color: black;
+    color:#9c2daf;
+    padding:10px;
+    margin:20px;
+    
+}
+
+tr{
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+    color:#be55d1;
+}
+
+
+
