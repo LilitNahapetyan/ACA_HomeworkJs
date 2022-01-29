@@ -25,8 +25,10 @@ function vote() {
       addCountry.value === rows[i].cells[2].innerHTML
     ) {
       rows[i].cells[3].innerText++;
-      if (rows[i - 1].cells[3].innerText < rows[i].cells[3].innerText) {
-        rows[i - 1].parentNode.insertBefore(rows[i], rows[i - 1]);
+      let j = i;
+      while (rows[j - 1].cells[3].innerText < rows[j].cells[3].innerText) {
+        rows[j - 1].parentNode.insertBefore(rows[j], rows[j - 1]);
+        j--;
       }
     }
 }
