@@ -1,0 +1,237 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    border:none;
+    text-decoration: none;
+    outline:none;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #fcf2e8;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    background: rgb(146, 133, 116);
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    width: 25%;
+
+}
+
+#my-name{
+    color: #fff;
+    font-family: cursive;
+    font-size: 30px;
+}
+.navbar > a{
+    display: block;
+    color:#fff;
+    margin:7%;
+    font-size: 20px;
+    font-family:monospace;
+}
+
+.navbar > a:hover{
+    color:rgb(240, 217, 188);
+    letter-spacing: 1px;
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    margin-left: 25%;
+    padding:20px;
+}
+
+.im{
+    height:50vh;
+    width: 30vw;
+   
+}
+.img{
+    max-height: 50vh;
+    max-width: 30vw;
+    border-radius: 50%;
+}
+.text{
+    height:300px;
+    width:400px;
+}
+
+.hi{
+    font-size: 30px;
+    text-transform:uppercase;
+}
+
+.text{
+    font-family:Verdana;
+    color:rgb(121, 116, 116);
+}
+
+.sections{
+    margin-left:25%;
+    font-size: 16px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 450vh;
+    width: 70vw;
+}
+
+
+.education, .about, .contact{
+    width: 70vw;
+    height: 100vh;
+    background-color:rgba(231, 228, 228, 0.596);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:5%;
+
+}
+
+#title-edu,#title-hobby,#title-about,#title-contact{
+    background-color: rgb(121, 116, 116);
+    text-align: center;
+    padding: 2%;
+    font-style: italic;
+    font-family: cursive;
+    padding: 0;
+    color: #fff;
+}
+#title-skill{
+    text-align: center;
+    font-family: cursive;
+    
+}
+.skills{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.skill-name{
+    font-family: cursive;
+    color:rgb(121, 116, 116);
+    font-size: 18px;
+}
+.hobby{
+    width: 70vw;
+    height: 150vh;
+    background-color:rgba(231, 228, 228, 0.596);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:5%;
+
+}
+#cake-pic{
+    width: 70vw;
+    height: 100vh;
+
+}
+
+#title-cake{
+    color:rgb(121, 116, 116);
+    font-family: cursive;
+}
+.img-cake{
+    margin:5%;
+    max-width:30vh;
+    max-height: 30vh;
+}
+.img-cake:hover{
+    transform: scale(1.4);
+
+}
+
+.contact{
+    width: 70vw;
+    height: 50vh;
+}
+
+#homebtn{
+    background-color: rgb(146, 133, 116);
+    color:mintcream;
+    padding:1%;
+    border-radius: 30%;
+    display: none;
+}
+
+#homebtn:hover{
+    background-color: rgba(90, 83, 75, 0.781);
+}
+
+.icon{
+    width:3vw;
+    height:3vw;
+}
+
+.contact{
+    font-family: cursive;
+    color: rgb(31, 28, 25);
+    display: flex;
+    justify-content: space-between;
+}
+.gmail {
+    font-size: 14px;
+    color:#000;
+}
+
+@media screen and (max-width:500px){
+    .home{
+        flex-direction: row;
+        margin:0;
+        padding:5%;
+    }
+    #nav{
+        display: none;
+    }
+    
+    #homebtn{
+        display: inline;
+        position: fixed;
+        align-self: flex-start;
+        left:1%;
+        
+    }
+    .sections{
+        height: 400vh;
+        justify-content: space-between;
+        font-size: 12px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .hi{
+        font-size: 20px;
+    }
+    
+    .text{
+        font-size:15px;
+    }
+    #my-name{
+        font-size: 15px;
+    }
+    .skills{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
