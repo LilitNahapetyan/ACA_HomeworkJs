@@ -1,0 +1,11 @@
+#dog_img{
+  width: 500px;
+  height: 500px;
+  margin: 20px;
+}
+
+img{
+  max-width: 500px;
+  max-height: 500px;
+  object-fit:contain;
+}
