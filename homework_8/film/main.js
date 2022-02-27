@@ -31,5 +31,4 @@ fetch("https://ghibliapi.herokuapp.com/films").then((responce) => {
     `;
 
   });
-  console.log(title);
 });
