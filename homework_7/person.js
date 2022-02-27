@@ -11,7 +11,7 @@ It should have a toString method.
 Teacher is inherited from Person. It should have program(string), pay.
 It should have appropriate getters and setters. 
 It should have a toString method.*/
-
+"use strict";
 class Person {
   constructor(firstName, lastName, gender, age) {
     this._firstName = firstName;
@@ -24,7 +24,7 @@ class Person {
     return this._firstName;
   }
   set firstName(newFName) {
-    this._firstName = newName;
+    this._firstName = newFName;
   }
   get lastName() {
     return this._lastName;
@@ -56,13 +56,15 @@ class Person {
     );
   }
 }
-let passedExams = [];
+
 class Student extends Person {
-  constructor(firstName, lastName, gender, age, program = [], year, fee) {
+  
+  constructor(firstName, lastName, gender, age, program, year, fee,passedExams = []) {
     super(firstName, lastName, gender, age);
     this._program = program;
     this._year = year;
     this._fee = fee;
+    this.passedExams = passedExams;
   }
 
   get year() {
@@ -95,18 +97,19 @@ class Student extends Person {
       this._fee
     );
   }
-
-  passExam(program, grade) {
+  #passedExams = [];
+  passExam(program, grade) { 
     if (grade >= 50 && this._program.includes(program)) {
-      passedExams.push(program);
+      this.#passedExams.push(program);
     }
-    if (passedExams.length == this._program.length) {
+    if (this.#passedExams.length == this._program.length) {
       this._year += 1;
     }
   }
 }
 
 class Teacher extends Person {
+
   constructor(firstName, lastName, gender, age, program, pay) {
     super(firstName, lastName, gender, age);
     this._program = program;

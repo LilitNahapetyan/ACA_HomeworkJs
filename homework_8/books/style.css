@@ -1,0 +1,10 @@
+table{
+    height: 500px;
+    width: 700px;
+    border-radius: 10px;
+  }
+  
+  th{
+    border: 1px solid rgb(153, 146, 146);
+    background-color: rgba(236, 221, 203, 0.336);
+  }
