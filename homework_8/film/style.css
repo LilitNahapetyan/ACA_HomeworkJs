@@ -1,0 +1,10 @@
+table{
+  height: 500px;
+  width: 700px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+th{
+  border: 1px solid black;
+}
