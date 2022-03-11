@@ -1,0 +1,16 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th{
+      background-color: rgb(247, 243, 239);
+      font-family:Courier;
+     }
+  thead, tr {
+    border: 1px solid #a8a1a1;
+    text-align: center;
+    padding: 8px;
+  }
+  
+ 
